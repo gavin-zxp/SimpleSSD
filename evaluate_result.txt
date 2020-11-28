@@ -1,0 +1,198 @@
+==============================
+类别 [TP FP FN P R]
+总体  [ 0.  0.  8. nan  0.]
+银行卡  [ 0.  0.  4. nan  0.]
+驾照  [ 0.  0.  2. nan  0.]
+身份证  [ 0.  0.  2. nan  0.]
+*******error file names*******
+./zw_data_resize/IMG_20201105_215231.jpg
+./zw_data_resize/IMG_20201105_215208.jpg
+./zw_data_resize/IMG_20201106_005343.jpg
+./zw_data_resize/IMG_20201106_005430.jpg
+==============================
+类别 [TP FP FN P R]
+总体  [11.          3.         93.          0.78571429  0.10576923]
+银行卡  [11.          3.         33.          0.78571429  0.25      ]
+驾照  [ 0.  0. 29. nan  0.]
+身份证  [ 0.  0. 31. nan  0.]
+*******error file names*******
+./zw_data_resize/IMG_20201105_235437.jpg
+./zw_data_resize/IMG_20201106_005121.jpg
+./zw_data_resize/IMG_20201105_214545.jpg
+./zw_data_resize/IMG_20201105_214108.jpg
+./zw_data_resize/IMG_20201106_005249.jpg
+./zw_data_resize/IMG_20201106_000352.jpg
+./zw_data_resize/IMG_20201106_004708.jpg
+./zw_data_resize/IMG_20201106_004630.jpg
+./zw_data_resize/IMG_20201106_004523.jpg
+./zw_data_resize/IMG_20201106_004925.jpg
+./zw_data_resize/IMG_20201105_214128.jpg
+./zw_data_resize/IMG_20201105_214331.jpg
+./zw_data_resize/IMG_20201106_004116.jpg
+./zw_data_resize/IMG_20201105_214501.jpg
+./zw_data_resize/IMG_20201106_005343.jpg
+./zw_data_resize/IMG_20201105_214437.jpg
+./zw_data_resize/IMG_20201105_215208.jpg
+./zw_data_resize/IMG_20201106_000019.jpg
+./zw_data_resize/IMG_20201105_235938.jpg
+./zw_data_resize/IMG_20201105_215105.jpg
+./zw_data_resize/IMG_20201106_004905.jpg
+./zw_data_resize/IMG_20201106_005022.jpg
+./zw_data_resize/IMG_20201106_004745.jpg
+./zw_data_resize/IMG_20201105_214023.jpg
+./zw_data_resize/IMG_20201106_004914.jpg
+./zw_data_resize/IMG_20201106_005639.jpg
+./zw_data_resize/IMG_20201105_214343.jpg
+./zw_data_resize/IMG_20201105_215117.jpg
+./zw_data_resize/IMG_20201105_214817.jpg
+./zw_data_resize/IMG_20201105_213927.jpg
+./zw_data_resize/IMG_20201105_214417.jpg
+./zw_data_resize/IMG_20201105_214319.jpg
+./zw_data_resize/IMG_20201105_214226.jpg
+./zw_data_resize/IMG_20201106_005145.jpg
+./zw_data_resize/IMG_20201105_214237.jpg
+./zw_data_resize/IMG_20201106_005520.jpg
+./zw_data_resize/IMG_20201106_004942.jpg
+./zw_data_resize/IMG_20201106_005557.jpg
+./zw_data_resize/IMG_20201105_214852.jpg
+./zw_data_resize/IMG_20201105_214151.jpg
+./zw_data_resize/IMG_20201105_215000.jpg
+./zw_data_resize/IMG_20201105_214212.jpg
+./zw_data_resize/IMG_20201106_004828.jpg
+./zw_data_resize/IMG_20201106_005111.jpg
+./zw_data_resize/IMG_20201105_214402.jpg
+./zw_data_resize/IMG_20201105_214530.jpg
+./zw_data_resize/IMG_20201106_000231.jpg
+./zw_data_resize/IMG_20201106_005430.jpg
+./zw_data_resize/IMG_20201106_000101.jpg
+./zw_data_resize/IMG_20201105_215231.jpg
+./zw_data_resize/IMG_20201105_214618.jpg
+./zw_data_resize/IMG_20201106_004201.jpg
+./zw_data_resize/IMG_20201105_214926.jpg
+==============================
+类别 [TP FP FN P R]
+总体  [11.          3.         93.          0.78571429  0.10576923]
+银行卡  [11.          3.         33.          0.78571429  0.25      ]
+驾照  [ 0.  0. 29. nan  0.]
+身份证  [ 0.  0. 31. nan  0.]
+*******error file names*******
+./zw_data_resize/IMG_20201106_004828.jpg
+./zw_data_resize/IMG_20201105_214331.jpg
+./zw_data_resize/IMG_20201105_215000.jpg
+./zw_data_resize/IMG_20201106_004745.jpg
+./zw_data_resize/IMG_20201106_004523.jpg
+./zw_data_resize/IMG_20201105_214926.jpg
+./zw_data_resize/IMG_20201106_005145.jpg
+./zw_data_resize/IMG_20201105_213927.jpg
+./zw_data_resize/IMG_20201105_215117.jpg
+./zw_data_resize/IMG_20201105_214530.jpg
+./zw_data_resize/IMG_20201106_005639.jpg
+./zw_data_resize/IMG_20201106_000231.jpg
+./zw_data_resize/IMG_20201105_214437.jpg
+./zw_data_resize/IMG_20201105_214343.jpg
+./zw_data_resize/IMG_20201105_214545.jpg
+./zw_data_resize/IMG_20201106_004116.jpg
+./zw_data_resize/IMG_20201105_214817.jpg
+./zw_data_resize/IMG_20201105_214212.jpg
+./zw_data_resize/IMG_20201106_004914.jpg
+./zw_data_resize/IMG_20201106_000352.jpg
+./zw_data_resize/IMG_20201105_214618.jpg
+./zw_data_resize/IMG_20201105_214108.jpg
+./zw_data_resize/IMG_20201105_214023.jpg
+./zw_data_resize/IMG_20201105_214128.jpg
+./zw_data_resize/IMG_20201105_214402.jpg
+./zw_data_resize/IMG_20201106_005430.jpg
+./zw_data_resize/IMG_20201106_004708.jpg
+./zw_data_resize/IMG_20201105_214319.jpg
+./zw_data_resize/IMG_20201106_005111.jpg
+./zw_data_resize/IMG_20201106_000019.jpg
+./zw_data_resize/IMG_20201105_215231.jpg
+./zw_data_resize/IMG_20201106_005121.jpg
+./zw_data_resize/IMG_20201106_005557.jpg
+./zw_data_resize/IMG_20201106_004925.jpg
+./zw_data_resize/IMG_20201106_004630.jpg
+./zw_data_resize/IMG_20201105_214852.jpg
+./zw_data_resize/IMG_20201105_215105.jpg
+./zw_data_resize/IMG_20201106_004201.jpg
+./zw_data_resize/IMG_20201105_215208.jpg
+./zw_data_resize/IMG_20201105_214226.jpg
+./zw_data_resize/IMG_20201105_214237.jpg
+./zw_data_resize/IMG_20201105_214417.jpg
+./zw_data_resize/IMG_20201105_235437.jpg
+./zw_data_resize/IMG_20201106_004905.jpg
+./zw_data_resize/IMG_20201106_005022.jpg
+./zw_data_resize/IMG_20201106_005249.jpg
+./zw_data_resize/IMG_20201106_000101.jpg
+./zw_data_resize/IMG_20201106_005343.jpg
+./zw_data_resize/IMG_20201105_214501.jpg
+./zw_data_resize/IMG_20201105_214151.jpg
+./zw_data_resize/IMG_20201106_004942.jpg
+./zw_data_resize/IMG_20201105_235938.jpg
+./zw_data_resize/IMG_20201106_005520.jpg
+==============================
+类别 [TP FP FN P R]
+总体  [11.          3.         93.          0.78571429  0.10576923]
+银行卡  [11.          3.         33.          0.78571429  0.25      ]
+驾照  [ 0.  0. 29. nan  0.]
+身份证  [ 0.  0. 31. nan  0.]
+*******error file names*******
+./zw_data_resize/IMG_20201105_235938.jpg
+./zw_data_resize/IMG_20201106_004745.jpg
+./zw_data_resize/IMG_20201106_005639.jpg
+./zw_data_resize/IMG_20201105_214417.jpg
+./zw_data_resize/IMG_20201106_004630.jpg
+./zw_data_resize/IMG_20201105_214023.jpg
+./zw_data_resize/IMG_20201106_004201.jpg
+./zw_data_resize/IMG_20201106_005557.jpg
+./zw_data_resize/IMG_20201106_004925.jpg
+./zw_data_resize/IMG_20201105_214817.jpg
+./zw_data_resize/IMG_20201105_235437.jpg
+./zw_data_resize/IMG_20201106_004905.jpg
+./zw_data_resize/IMG_20201105_214331.jpg
+./zw_data_resize/IMG_20201106_000019.jpg
+./zw_data_resize/IMG_20201105_214108.jpg
+./zw_data_resize/IMG_20201105_215105.jpg
+./zw_data_resize/IMG_20201105_214151.jpg
+./zw_data_resize/IMG_20201105_214226.jpg
+./zw_data_resize/IMG_20201105_215117.jpg
+./zw_data_resize/IMG_20201106_005145.jpg
+./zw_data_resize/IMG_20201106_000231.jpg
+./zw_data_resize/IMG_20201105_215208.jpg
+./zw_data_resize/IMG_20201105_215000.jpg
+./zw_data_resize/IMG_20201106_005022.jpg
+./zw_data_resize/IMG_20201105_214402.jpg
+./zw_data_resize/IMG_20201106_000352.jpg
+./zw_data_resize/IMG_20201105_213927.jpg
+./zw_data_resize/IMG_20201106_005121.jpg
+./zw_data_resize/IMG_20201105_214530.jpg
+./zw_data_resize/IMG_20201106_004708.jpg
+./zw_data_resize/IMG_20201105_214618.jpg
+./zw_data_resize/IMG_20201105_214926.jpg
+./zw_data_resize/IMG_20201105_214319.jpg
+./zw_data_resize/IMG_20201106_005430.jpg
+./zw_data_resize/IMG_20201105_214237.jpg
+./zw_data_resize/IMG_20201105_215231.jpg
+./zw_data_resize/IMG_20201106_004914.jpg
+./zw_data_resize/IMG_20201105_214852.jpg
+./zw_data_resize/IMG_20201105_214501.jpg
+./zw_data_resize/IMG_20201105_214212.jpg
+./zw_data_resize/IMG_20201106_005249.jpg
+./zw_data_resize/IMG_20201106_005520.jpg
+./zw_data_resize/IMG_20201105_214343.jpg
+./zw_data_resize/IMG_20201105_214128.jpg
+./zw_data_resize/IMG_20201106_004828.jpg
+./zw_data_resize/IMG_20201106_005111.jpg
+./zw_data_resize/IMG_20201105_214437.jpg
+./zw_data_resize/IMG_20201106_004116.jpg
+./zw_data_resize/IMG_20201106_005343.jpg
+./zw_data_resize/IMG_20201106_004942.jpg
+./zw_data_resize/IMG_20201106_000101.jpg
+./zw_data_resize/IMG_20201106_004523.jpg
+./zw_data_resize/IMG_20201105_214545.jpg
+==============================
+类别 [TP FP FN P R]
+总体  [104.   0.   0.   1.   1.]
+银行卡  [44.  0.  0.  1.  1.]
+驾照  [29.  0.  0.  1.  1.]
+身份证  [31.  0.  0.  1.  1.]
+*******error file names*******
