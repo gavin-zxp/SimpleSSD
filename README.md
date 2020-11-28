@@ -6,4 +6,5 @@ This model is simple than standard SSD, because my Object Detection task is simp
 Config params in ssd_train.py and run it.
 
 OS: Windows / Linux
+
 Dependency: Tensorflow, Keras, opencv, pillow, matplotlib ...
