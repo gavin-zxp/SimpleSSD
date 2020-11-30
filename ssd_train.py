@@ -231,7 +231,7 @@ val_generator = val_dataset.generate(batch_size=batch_size,
 # 设置 Keras callbacks. 一个用于 early stopping, 一个用于在训练看起来没有进展的情况下降低学习率,
 # 一个用于保存当前最佳模型, 一个用于将训练过程的值写入 CSV 文件.
 #
-model_checkpoint = ModelCheckpoint(filepath='ssd7_low_size_epoch-{epoch:02d}_loss-{loss:.4f}_val_loss-{val_loss:.4f}.h5',
+model_checkpoint = ModelCheckpoint(filepath='ssd7_epoch-{epoch:02d}_loss-{loss:.4f}_val_loss-{val_loss:.4f}.h5',
                                    monitor='val_loss',
                                    verbose=1,
                                    save_best_only=True,
@@ -239,7 +239,7 @@ model_checkpoint = ModelCheckpoint(filepath='ssd7_low_size_epoch-{epoch:02d}_los
                                    mode='auto',
                                    period=1)
 
-csv_logger = CSVLogger(filename='ssd7_training_low_size_log.csv',
+csv_logger = CSVLogger(filename='ssd7_training_log.csv',
                        separator=',',
                        append=True)
 
@@ -263,7 +263,7 @@ callbacks = [model_checkpoint,
 
 # TODO: 设置 epochs 
 initial_epoch = 0
-final_epoch = 50
+final_epoch = 60
 steps_per_epoch = 100
 
 history = model.fit_generator(generator=train_generator,
@@ -280,97 +280,6 @@ plt.figure(figsize=(20, 12))
 plt.plot(history.history['loss'], label='loss')
 plt.plot(history.history['val_loss'], label='val_loss')
 plt.legend(loc='upper right', prop={'size': 24})
-plt.show()
-
-
-# ### 5. 做预测
-# 
-# 这里我们使用已经设置好的 validation generator 做预测
-# 
-
-# 1: 初始化 generator
-
-predict_generator = val_dataset.generate(batch_size=1,
-                                         shuffle=True,
-                                         transformations=[],
-                                         label_encoder=None,
-                                         returns={'processed_images',
-                                                  'processed_labels',
-                                                  'filenames'},
-                                         keep_images_without_gt=False)
-
-
-
-# 2: 获取预测所需输入
-
-batch_images, batch_labels, batch_filenames = next(predict_generator)
-
-i = 0  # 图像位置
-
-print("图像名:", batch_filenames[i])
-print("人工标注的值:\n")
-print(batch_labels[i])
-
-
-
-# 3: 作预测
-
-y_pred = model.predict(batch_images)
-
-# 4: 解码 `y_pred`
-# 如果我们训练是设置的是 'inference' 或者 'inference_fast' mode, 那么模型的最后一层为 `DecodeDetections` 层,
-# `y_pred` 就无需解码了. 但是我们选择了 'training' mode, 模型的原始输出需要解码. 这就是 `decode_detections()` 
-# 这个函数的功能. 这个函数的功能和 `DecodeDetections` 层做的事情一样, 只是使用 Numpy 而不是 TensorFlow 实现.
-# (Nunpy 只能使用CPU, 而不是GPU).
-# 
-
-y_pred_decoded = decode_detections(y_pred,
-                                   confidence_thresh=0.5,
-                                   iou_threshold=0.45,
-                                   top_k=200,
-                                   normalize_coords=normalize_coords,
-                                   img_height=img_height,
-                                   img_width=img_width)
-
-np.set_printoptions(precision=2, suppress=True, linewidth=90)
-print("预测值:\n")
-print('   类别   概率 xmin   ymin   xmax   ymax')
-print(y_pred_decoded[i])
-
-
-# 最后, 我们可以将预测的边界框画在图像上. 每一个预测的边界框都有类别名称和概率显示在边上. 
-# 人工标准的边界框也使用绿色的框画出来, 便于比较.
-
- 
-# 5: 在图像上画边界框 
-
-plt.figure(figsize=(20, 12))
-plt.imshow(batch_images[i])
-
-current_axis = plt.gca()
-
-colors = plt.cm.hsv(np.linspace(0, 1, n_classes+1)).tolist() # 设置边界框的颜色
-classes = ['background', 'bank_card', 'driver_license', 'id_card'] # 类别的名称
-
-# 画人工标注的边界框
-for box in batch_labels[i]:
-    xmin = box[1]
-    ymin = box[2]
-    xmax = box[3]
-    ymax = box[4]
-    label = '{}'.format(classes[int(box[0])])
-    current_axis.add_patch(plt.Rectangle((xmin, ymin), xmax-xmin, ymax-ymin, color='green', fill=False, linewidth=2))  
-    #current_axis.text(xmin, ymin, label, size='x-large', color='white', bbox={'facecolor':'green', 'alpha':1.0})
-
-# 画预测的边界框
-for box in y_pred_decoded[i]:
-    xmin = box[-4]
-    ymin = box[-3]
-    xmax = box[-2]
-    ymax = box[-1]
-    color = colors[int(box[0])]
-    label = '{}: {:.2f}'.format(classes[int(box[0])], box[1])
-    current_axis.add_patch(plt.Rectangle((xmin, ymin), xmax-xmin, ymax-ymin, color=color, fill=False, linewidth=2))  
-    current_axis.text(xmin, ymin, label, size='x-large', color='white', bbox={'facecolor': color, 'alpha': 1.0})
-
-
+plt.savefig('./loss.png')
+plt.close()
+print('Finish Training.')

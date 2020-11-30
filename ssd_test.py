@@ -33,6 +33,7 @@ def start_engine():
         filename = input("Please enter a image file path:\n")
         # filename = "./data/IMG_20201106_005343.jpg"
         if filename.lower() == "exit":
+            print('Program exit! Bye!')
             sys.exit()
         print("图像名: ", filename)
         images_numpy = []

@@ -124,4 +124,4 @@ def calc_pr(y_predict, image_list, labels_list, file_name_list):
 
 matplotlib.rc("font", family='KaiTi')
 calc_pr(y_pred_decoded, batch_images, batch_labels, batch_filenames)
-print("Finish!")
+print("Finish evaluate!")
