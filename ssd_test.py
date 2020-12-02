@@ -1,6 +1,7 @@
 # 
 # 测试
 #
+import os
 import sys
 from keras import backend as K
 from keras.models import load_model
@@ -30,15 +31,24 @@ def start_engine():
                                                    'compute_loss': ssd_loss.compute_loss})
     # 3. 做预测
     while True:
-        filename = input("Please enter a image file path:\n")
+        filename = input("*" * 50 + "\nPlease enter a image file path:\n")
         # filename = "./data/IMG_20201106_005343.jpg"
         if filename.lower() == "exit":
             print('Program exit! Bye!')
             sys.exit()
-        print("图像名: ", filename)
+        if len(filename.strip()) == 0:
+            continue
+        if not os.path.isfile(filename):
+            print(f"Input '{filename}' is not a file.")
+            continue
+        print("Image file: ", filename)
         images_numpy = []
-        with Image.open(filename) as image:
-            images_numpy.append(np.array(image, dtype=np.uint8))
+        try:
+            with Image.open(filename) as image:
+                images_numpy.append(np.array(image, dtype=np.uint8))
+        except OSError:
+            print(f"Input '{filename}' can not be open as an image.")
+            continue
         images_numpy = np.array(images_numpy)
         y_pred = model.predict(images_numpy)
         # 4: 解码 `y_pred`

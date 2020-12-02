@@ -6,7 +6,6 @@ import json
 import base64
 import numpy as np
 from PIL import Image
-from multiprocessing import Process
 from keras import backend as K
 from keras_loss_function.keras_ssd_loss import SSDLoss
 from keras.models import load_model
@@ -35,10 +34,7 @@ class HTTPServer(object):
         while True:
             client_req, client_address = self.server_socket.accept()
             print("[%s, %s]用户连接上了" % client_address)
-            handle_client_process = Process(target=handle_client,
-                                            args=(client_req, ))
-            handle_client_process.start()
-            # client_req.close()
+            handle_client(client_req)
 
     def bind(self, port):
         self.server_socket.bind(("", port))
