@@ -135,7 +135,7 @@ class AnchorBoxes(Layer):
 
         # 获取输入 tensor 的形状
         #if K.image_dim_ordering() == 'tf':  # keras old version api
-        if K.image_data_format() == 'channels_first':  # keras new version api
+        if K.image_data_format() == 'channels_last':  # keras new version api
             batch_size, feature_map_height, feature_map_width, feature_map_channels = x._keras_shape
         else: # 因为只支持 TensorFlow, 下面这一句可以不要, 但是也不影响功能 
             batch_size, feature_map_channels, feature_map_height, feature_map_width = x._keras_shape
@@ -221,7 +221,7 @@ class AnchorBoxes(Layer):
 
     def compute_output_shape(self, input_shape):
         # if K.image_dim_ordering() == 'tf':  # keras old version api
-        if K.image_data_format() == 'channels_first':  # keras new version api
+        if K.image_data_format() == 'channels_last':  # keras new version api
             batch_size, feature_map_height, feature_map_width, feature_map_channels = input_shape
         else: # 因为只支持 TensorFlow, 下面这一句可以不要, 但是也不影响功能 
             batch_size, feature_map_channels, feature_map_height, feature_map_width = input_shape
